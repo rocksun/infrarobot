@@ -1,0 +1,2 @@
+mkgroup {{if .user.gid}}id='{{.user.gid}}'{{end}} {{ .user.group }}
+mkuser {{if .user.uid}}id='{{.user.uid}}'{{end}}  {{if .user.group}}pgrp='{{.user.group}}'{{end}}  {{if .user.home}}home='{{.user.home}}'{{end}} {{.user.user}}

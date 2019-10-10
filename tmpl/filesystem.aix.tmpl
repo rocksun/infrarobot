@@ -1,0 +1,4 @@
+mklv -lv {{ .filesystem.lv}} {{ .filesystem.vg}} {{ .filesystem.size}}
+crfs -v jfs2 -d {{ .filesystem.lv}} -a size={{ .filesystem.size}} -m {{ .filesystem.path}} -A yes
+chmod 755 {{ .filesystem.path}}
+chown {{ .filesystem.user}}:{{ .filesystem.group}} {{ .filesystem.path}}
